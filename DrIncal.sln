@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35222.181
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DrIncal", "DrIncal.csproj", "{B9240D5F-3929-4688-B4BF-1615C9BF1F91}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B9240D5F-3929-4688-B4BF-1615C9BF1F91}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B9240D5F-3929-4688-B4BF-1615C9BF1F91}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B9240D5F-3929-4688-B4BF-1615C9BF1F91}.Debug|x86.ActiveCfg = Debug|x86
+		{B9240D5F-3929-4688-B4BF-1615C9BF1F91}.Debug|x86.Build.0 = Debug|x86
+		{B9240D5F-3929-4688-B4BF-1615C9BF1F91}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B9240D5F-3929-4688-B4BF-1615C9BF1F91}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B9240D5F-3929-4688-B4BF-1615C9BF1F91}.Release|x86.ActiveCfg = Release|x86
+		{B9240D5F-3929-4688-B4BF-1615C9BF1F91}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E5956D58-C6C5-40FC-A9C7-15739EB2E94A}
+	EndGlobalSection
+EndGlobal

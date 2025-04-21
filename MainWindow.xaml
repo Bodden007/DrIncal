@@ -1,0 +1,60 @@
+﻿<Window x:Class="DrIncal.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DrIncal"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">    
+    
+    <Grid>     
+        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="3*"></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>            
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"></ColumnDefinition>
+            <ColumnDefinition Width="1*"></ColumnDefinition>
+            <ColumnDefinition Width="1*"></ColumnDefinition>
+            <ColumnDefinition Width="1*"></ColumnDefinition>
+            <ColumnDefinition Width="1*"></ColumnDefinition>
+            <ColumnDefinition Width="0.1*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Grid Grid.Row="0">
+            <Menu Height="25" VerticalAlignment="Top" Background="White">
+                <MenuItem Header="Файл">
+                    <MenuItem Header="Открыть файл" Click="OpenFili_Click"></MenuItem>
+                </MenuItem>
+            </Menu>
+        </Grid>
+
+        <!--<Viewbox Grid.Row="1" LayoutTransform="true">
+        <Calendar x:Name="SelectData"></Calendar>
+        </Viewbox>-->
+
+        
+        
+        <ItemsControl x:Name="LogList" Grid.Row="1" Grid.Column="4" BorderBrush="Black" BorderThickness="1"
+                      Background="#C7FF00">
+            <TextBlock  Text="Выполнение:" FontSize="22" Foreground="Black"></TextBlock>
+        </ItemsControl>
+        <Grid Grid.Row="1" Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"></RowDefinition>
+                <RowDefinition Height="1*"></RowDefinition>
+                <RowDefinition Height="1*"></RowDefinition>
+                <RowDefinition Height="1*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Button x:Name="ChangeData" Grid.Row="0" Click="ChangeData_Click" IsEnabled="False"></Button>
+
+            <DatePicker Name="SelectDate" Grid.Column="1" Grid.Row="1" IsEnabled="False" SelectedDateChanged="Select_Date_Picker">
+
+            </DatePicker>
+        </Grid>
+        
+    </Grid>
+</Window>
