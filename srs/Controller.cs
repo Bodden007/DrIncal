@@ -1,4 +1,5 @@
 ﻿using DrIncal.srs.Entities;
+using DrIncal.srs.Interfaces;
 using DrIncal.srs.Models;
 using System;
 using System.Collections.Generic;
@@ -11,19 +12,8 @@ using static System.Net.WebRequestMethods;
 
 namespace DrIncal.srs
 {
-    internal class Controller
+    internal class Controller :  ControllerVariables, IController
     {
-        const string Provider = "Provider=Microsoft.jet.OLEDB.4.0; Data Source=";
-        public string? MessageController { get; set; } = string.Empty;
-        public string? PathFolder { get; set; } = string.Empty;
-        public string? FolderNameOnly { get; set; } = string.Empty;
-        public string? EsdnPath { get; set; } = string.Empty;
-        public string? PathMdbFile { get; set; } = string.Empty;
-        public string? JulianDate { get; set; } = string.Empty;
-        public DateTime? CalDate { get; set; }
-        public bool CmpName { get; set; } = true;
-        public bool? NameEsdnPath { get; set; } = false;
-
         //NOTE Class reading DB
         DbConnectios dbConnectios = new DbConnectios();
 
