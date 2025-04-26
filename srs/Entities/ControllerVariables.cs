@@ -8,8 +8,13 @@ namespace DrIncal.srs.Entities
 {
     internal class ControllerVariables
     {
-        readonly string Provider = "Provider=Microsoft.jet.OLEDB.4.0; Data Source=";
-        public string? MessageController { get; set; } = string.Empty;
+        public string[] _Passport = new string[2] 
+        {
+            "6a88nqgVC6K7vJuIUiVZAfm6w06jcMFCPvcjyLS06jsLslZaf1zCbDjzZmjCVK1z3sqjuTrlHhh",
+            "fULhOPQtsuO3tFlq3RE3"
+        }; 
+        readonly string _Provider = "Provider=Microsoft.jet.OLEDB.4.0; Data Source=";
+        public string? PassportCompressing { get; set; } = string.Empty;
         public string? PathFolder { get; set; } = string.Empty;
         public string? FolderNameOnly { get; set; } = string.Empty;
         public string? EsdnPath { get; set; } = string.Empty;

@@ -9,7 +9,7 @@ namespace DrIncal.srs.Models
 {
     internal class RenameFile
     {
-        public bool Rename(string pathNameFile, bool mdbName)
+        public bool Rename(string pathNameFile, bool cmpName)
         {
 
             var successfulRename = false;
@@ -17,13 +17,13 @@ namespace DrIncal.srs.Models
             //TODO else rename .cmp
             try
             {
-                if (mdbName)
+                if (cmpName)
                 {
                     File.Move(pathNameFile, Path.ChangeExtension(pathNameFile, "zip"));
-                }
+                } 
                 else
                 {
-
+                    File.Move(pathNameFile, Path.ChangeExtension(pathNameFile, "cmp"));
                 }
 
                 successfulRename = true;

@@ -7,35 +7,36 @@ using System.Threading.Tasks;
 
 namespace DrIncal.srs.Models
 {
+    //TODO В этот класс передавать пароли и возвращать пароль которым открылся
     internal class Compresing
     {
-        public string[] Passport = new string[2]
-        {
-            "6a88nqgVC6K7vJuIUiVZAfm6w06jcMFCPvcjyLS06jsLslZaf1zCbDjzZmjCVK1z3sqjuTrlHhh",
-            "fULhOPQtsuO3tFlq3RE3"
-        };
-        public bool UncopressFile(string filename, string pathFile)
+        //public string[] Passport = new string[2]
+        //{
+        //    "6a88nqgVC6K7vJuIUiVZAfm6w06jcMFCPvcjyLS06jsLslZaf1zCbDjzZmjCVK1z3sqjuTrlHhh",
+        //    "fULhOPQtsuO3tFlq3RE3"
+        //};
+        public string UncopressFile(string filename, string pathFile, string[] passport)
         {
             FastZip fastZip = new FastZip();
-            var resultUncompress = false;
+            var passportUncompress = String.Empty;
 
-            for (int i = 0; i < Passport.Length; i++)
+            for (int i = 0; i < passport.Length; i++)
             {
                 try
                 {
-                    fastZip.Password = Passport[i];
+                    fastZip.Password = passport[i];
                     fastZip.ExtractZip(filename, pathFile, null);
 
-                    resultUncompress = true;
+                    passportUncompress = passport[i];
                     break;
                 }
                 catch (Exception ex)
                 {
-                    resultUncompress = false;
+                    passportUncompress = String.Empty;
                 }
             }
 
-            return resultUncompress;
+            return passportUncompress;
         }
     }
 }

@@ -22,6 +22,7 @@ namespace DrIncal.srs.Models
             {
                 for (int i = 0; i < 3; i++)
                 {
+                    //NOTE проверка 3-букв Верхнего регистра.
                     if (char.IsUpper(NameFolder[i]) == true)
                     {
                         folder = true;
