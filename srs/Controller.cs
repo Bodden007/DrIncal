@@ -12,7 +12,10 @@ using static System.Net.WebRequestMethods;
 
 namespace DrIncal.srs
 {
-    internal class Controller : ControllerVariables, IController
+    /// <summary>
+    /// Основной управляющий класс
+    /// </summary>
+    internal class Controller : ControllerEntities, IController
     {
         //NOTE Class reading DB
         DbConnectios dbConnectios = new DbConnectios();
@@ -28,17 +31,21 @@ namespace DrIncal.srs
             var cmpFile = false;  // проверка, есть ли файл .смр
             var changeExtenFile = false;  //проверка замены расширения файла
 
-            MovingFile mF = new();
+            //MovingFile mF = new();
 
-            var pathFold = mF.CopyFile();
+            //var pathFold = mF.CopyFile();
+
+            DirectoryController dr = new();
+
+            var pathFold = dr.FolderManagement();
 
             if (pathFold)
             {
-                MessageSend?.Invoke(this, new ControllerMessage($"Путь найден", false));
+                MessageSend?.Invoke(this, new ControllerMessage($"Временная папка найдена", false));
             }
             else
             {
-                MessageSend?.Invoke(this, new ControllerMessage($"Путь не найден ", true));
+                MessageSend?.Invoke(this, new ControllerMessage($"Временная папка не найдена", true));
             }
 
             #region

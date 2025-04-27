@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DrIncal.srs.Entities
 {
-    internal class ControllerVariables
+    internal class ControllerEntities
     {
         public string[] _Passport = new string[2] 
         {
